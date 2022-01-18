@@ -80,8 +80,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # change "split" mode
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+z splitv
+bindsym $mod+x splith
 
 # switch current container between different layout styles
 bindsym $mod+s layout stacking
@@ -139,13 +139,17 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set +5%
 
+# appearance
+smart_borders on
+default_border pixel 1
+
 # autostart udiskie
 exec udiskie &
 
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    status_command status_bar
     position top
+    status_command status_bar
     pango_markup enabled
     font pango: Source Code Pro, Awesome 11
 

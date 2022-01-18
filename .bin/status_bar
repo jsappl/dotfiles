@@ -4,7 +4,7 @@
 
 # specify network interfaces
 wired_interface="enp0s31f6"
-wireless_interface="wlp4s0"
+wireless_interface="wlan0"
 
 # specify battery and AC interfaces
 battery_interface="BAT0"
@@ -44,7 +44,8 @@ do
     wireless="<span foreground='${red}'> </span>"
   fi
   if [ "${wired_status}" == "connected" ]; then
-    wired="${sep} "
+    wired=""
+    wireless=""
   else
     wired=""
     #wired="${sep}<span foreground='${red}'> </span>"
@@ -81,7 +82,7 @@ do
   
   ### audio
   audio_unparsed=$(\
-    amixer -D pulse get Master \
+    amixer -D pipewire get Master \
     | grep -oP "(?<=\[)(\d+%|on|off)(?=\])" \
     | head -n 2)
   audio_volume="$(sed -n 1p <<< ${audio_unparsed})%"

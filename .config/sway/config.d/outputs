@@ -1,20 +1,29 @@
 # generic
-output * bg ~/.config/sway/assets/background_1920_1080.png fill
+output * bg #000000 solid_color
 
-# samsung display @home
-output "Samsung Electric Company CF791 HTRJ700407" bg ~/.config/sway/assets/background_3440x1440.png fill
-output "Samsung Electric Company CF791 HTRJ700407" pos 1920 0 res 3440x1440
-focus output "Samsung Electric Company CF791 HTRJ700407"
-
-# laptop @home
-output eDP-1 bg ~/.config/sway/assets/background_1920_1080.png fill
-output eDP-1 pos 0 0 res 1920x1080
-
+# auto-disable laptop monitor if docked
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
 
+# philips triple monitor setup @home
+# left (HDMI)
+output "DP-3" {
+    mode 1920x1080
+    transform 270
+    pos 0 0
+}
+# middle (DP)
+output "DP-5" {
+    mode 1920x1080
+    transform 270
+    pos 1080 0
+}
+# right (DP)
+output "DP-4" {
+    mode 1920x1080
+    transform 270
+    pos 2160 0
+}
+
 # beamer
 # output HDMI-A-1 pos 1920 0 res 1280x720
-
-# dell display @oana:
-output "Dell Inc. DELL P2419HC 6K2FL03" pos -1920 0 res 1920x1080
