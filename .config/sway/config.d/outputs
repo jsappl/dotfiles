@@ -9,19 +9,19 @@ bindswitch --reload --locked lid:off output eDP-1 enable
 # left (HDMI)
 output "DP-3" {
     mode 1920x1080
-    transform 270
+    transform 90
     pos 0 0
 }
 # middle (DP)
 output "DP-5" {
     mode 1920x1080
-    transform 270
+    transform 90
     pos 1080 0
 }
 # right (DP)
 output "DP-4" {
     mode 1920x1080
-    transform 270
+    transform 90
     pos 2160 0
 }
 

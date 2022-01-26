@@ -149,7 +149,7 @@ exec udiskie &
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    status_command status_bar
+    status_command ~/.bin/status_bar
     pango_markup enabled
     font pango: Source Code Pro, Awesome 11
 
