@@ -1,3 +1,6 @@
+# LaTeX
+build/
+
 # pyenv
 .python-version
 
