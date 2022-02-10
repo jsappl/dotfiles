@@ -7,19 +7,19 @@ bindswitch --reload --locked lid:off output eDP-1 enable
 
 # philips triple monitor setup @home
 # left (HDMI)
-output "DP-3" {
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006744" {
     mode 1920x1080
     transform 90
     pos 0 0
 }
 # middle (DP)
-output "DP-5" {
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" {
     mode 1920x1080
     transform 90
     pos 1080 0
 }
 # right (DP)
-output "DP-4" {
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006146" {
     mode 1920x1080
     transform 90
     pos 2160 0
