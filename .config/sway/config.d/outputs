@@ -28,5 +28,20 @@ output "Philips Consumer Electronics Company PHL 275E2F UHB2112006146" {
     pos 2160 0
 }
 
+# iut uibk
+output "Samsung Electric Company SyncMaster 0x00007B34" {
+    mode 1920x1200
+    pos 0 0
+}
+output eDP-1 {
+    pos 0 1200
+}
+
+# plansee uibk
+output "Goldstar Company Ltd LG HDR WQHD 104NTGY6M095" {
+    mode 2560x1080
+    scale 1
+}
+
 # beamer
 # output HDMI-A-1 pos 1920 0 res 1280x720
