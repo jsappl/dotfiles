@@ -4,6 +4,7 @@
 
 # specify network interfaces
 wired_interface="enp0s31f6"
+docking_interface="enp59s0u1u1"
 wireless_interface="wlan0"
 
 # specify battery and AC interfaces
@@ -31,11 +32,15 @@ do
     nmcli -f GENERAL.STATE device show ${wired_interface} 2>&1 \
     | grep -oP "(?<=\()(\w+)")
 
+  docking_status=$(\
+    nmcli -f GENERAL.STATE device show ${docking_interface} 2>&1 \
+    | grep -oP "(?<=\()(\w+)")
+
   wireless_status=$(\
       nmcli -f GENERAL.STATE device show ${wireless_interface} 2>&1 \
       | grep -oP "(?<=\()(\w+)")
 
-  if [ "${wireless_status}" == "connected" ]; then
+  if [ "${wireless_status}" = "connected" ]; then
     wireless=" $(\
       nmcli -t -f active,ssid,bars device wifi \
       | grep "^yes" \
@@ -43,7 +48,7 @@ do
   else
     wireless="<span foreground='${red}'> </span>"
   fi
-  if [ "${wired_status}" == "connected" ]; then
+  if [ "${wired_status}" = "connected" ] || [ "${docking_status}" = "connected" ]; then
     wired=""
     wireless=""
   else
@@ -64,7 +69,7 @@ do
   battery_path="/sys/class/power_supply/${battery_interface}"
   if [ -d "${ac_path}" ]; then
     if [ "$(cat ${ac_path}/online)" -eq 1 ]; then
-      if [ "$(cat ${battery_path}/status)" == "Charging" ]; then
+      if [ "$(cat ${battery_path}/status)" = "Charging" ]; then
         # AC active + battery charging
         power="<span foreground='${green}'> </span>"
       else
@@ -87,7 +92,7 @@ do
     | head -n 2)
   audio_volume="$(sed -n 1p <<< ${audio_unparsed})%"
   audio_status="$(sed -n 2p <<< ${audio_unparsed})"
-  if [ "${audio_status}" == "off" ]; then
+  if [ "${audio_status}" = "off" ]; then
    audio=" "
  else
    audio=" "
