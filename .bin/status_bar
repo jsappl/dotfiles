@@ -93,9 +93,9 @@ do
   audio_volume="$(sed -n 1p <<< ${audio_unparsed})%"
   audio_status="$(sed -n 2p <<< ${audio_unparsed})"
   if [ "${audio_status}" = "off" ]; then
-   audio=" "
+   audio=" "
  else
-   audio=" "
+   audio=" "
   fi
   audio="${audio}${audio_volume}"
   
