@@ -18,14 +18,13 @@ output "Philips Consumer Electronics Company PHL 275E2F UHB2112006744" {
 # middle (DP)
 output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" {
     mode 1920x1080
-    transform 90
-    pos 1080 0
+    pos 1080 160
 }
 # right (DP)
 output "Philips Consumer Electronics Company PHL 275E2F UHB2112006146" {
     mode 1920x1080
-    transform 90
-    pos 2160 0
+    transform 270
+    pos 3000 40
 }
 
 # iut uibk
