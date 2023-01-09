@@ -37,7 +37,7 @@ output eDP-1 {
 }
 
 # plansee uibk
-output "Goldstar Company Ltd LG HDR WQHD 104NTGY6M095" {
+output "LG Electronics LG HDR WQHD 104NTGY6M095" {
     mode 3440x1440
     scale 1
 }
