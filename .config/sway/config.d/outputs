@@ -43,4 +43,4 @@ output "LG Electronics LG HDR WQHD 104NTGY6M095" {
 }
 
 # beamer
-# output HDMI-A-1 pos 1920 0 res 1280x720
+output HDMI-A-1 pos 1920 0 res 1280x720
