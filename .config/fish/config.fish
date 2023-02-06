@@ -2,6 +2,7 @@
 set fish_greeting
 
 fish_vi_key_bindings
+fish_ssh_agent
 
 set -gx EDITOR nvim
 set -gx LANG en_US.UTF-8
