@@ -33,5 +33,14 @@ output "LG Electronics LG HDR WQHD 104NTGY6M095" {
     scale 1
 }
 
+# parents home
+output "BNQ BenQ XL2411Z 51G07519SL0" {
+    mode 1920x1080
+    pos 0 -1080
+}
+output eDP-1 {
+    pos 0 0
+}
+
 # beamer
 output HDMI-A-1 pos 1920 0 res 1280x720
