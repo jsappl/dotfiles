@@ -43,4 +43,4 @@ output eDP-1 {
 }
 
 # beamer
-output HDMI-A-1 pos 1920 0 res 1280x720
+# output HDMI-A-1 pos 1920 0 res 1280x720
