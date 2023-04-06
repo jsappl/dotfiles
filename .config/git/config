@@ -12,3 +12,7 @@
 	log-graph = log --graph --pretty=format:\"%C(yellow)%h %C(cyan)%an%C(auto)%d %Creset%s\" --all
 [core]
 	excludesfile = ~/.config/git/ignore
+[diff]
+	colorMoved = zebra
+[fetch]
+	prune = true
