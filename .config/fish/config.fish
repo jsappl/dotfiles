@@ -7,7 +7,7 @@ fish_ssh_agent
 set -gx EDITOR nvim
 set -gx LANG en_US.UTF-8
 
-set -gx PATH ~/.bin /usr/local/bin /usr/bin /usr/local/sbin
+set -gx PATH ~/.bin /usr/local/bin /usr/bin /usr/local/sbin ~/.local/bin
 set -gx PATH $PATH usr/bin/site_perl /usr/bin/vendor_perl /usr/bin/core_perl
 
 set -gx PIP_REQUIRE_VIRTUALENV true
