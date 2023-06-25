@@ -16,6 +16,8 @@ set -gx PATH $PYENV_ROOT/bin $PATH
 
 set -gx TEXMFHOME ~/.texmf
 
+set -gx PASSWORD_STORE_GENERATED_LENGTH 32
+
 pyenv init --path | source
 pyenv init - | source
 pyenv virtualenv-init - | source
