@@ -25,9 +25,9 @@ colors:
   primary:
     background: "0x282a36"
     foreground: "0xf8f8f2"
-  cursor:
-    text: "0x44475a"
-    cursor: "0xf8f8f2"
+  # cursor:
+  #  text: "0x44475a"
+  #  cursor: "0xf8f8f2"
   normal:
     black: "0x000000"
     red: "0xff5555"
