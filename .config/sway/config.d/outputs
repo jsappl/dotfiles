@@ -16,9 +16,9 @@ output "Philips Consumer Electronics Company PHL 275E2F UHB2112006744" {
     pos 0 0
 }
 # middle (DP)
-output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" {
+output "LG Electronics 27GL850 911NTUW84862" {
     mode 1920x1080
-    pos 1080 160
+    pos 1080 415
 }
 # right (DP)
 output "Philips Consumer Electronics Company PHL 275E2F UHB2112006146" {
