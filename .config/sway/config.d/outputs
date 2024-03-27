@@ -8,9 +8,9 @@ bindswitch --reload --locked lid:off output eDP-1 enable
 # notebook screen
 output eDP-1 scale 1.5
 
-# philips triple monitor setup @home
+# triple monitor setup @home
 # left (HDMI)
-output "Philips Consumer Electronics Company PHL 275E2F UHB2112006744" {
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006146" {
     mode 1920x1080
     transform 90
     pos 0 0
@@ -21,7 +21,7 @@ output "LG Electronics 27GL850 911NTUW84862" {
     pos 1080 415
 }
 # right (DP)
-output "Philips Consumer Electronics Company PHL 275E2F UHB2112006146" {
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006744" {
     mode 1920x1080
     transform 270
     pos 3000 40
