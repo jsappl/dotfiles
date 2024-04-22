@@ -24,7 +24,7 @@ green="#50FA7B"
 while true
 do
   ### time
-  time=$(date +"%A %Y-%m-%d %H:%M")
+  time=" $(date +"%A %Y-%m-%d %H:%M")"
   time="${time} $(date -u +"(%H:%M UTC)")"
 
   ### network
@@ -49,7 +49,7 @@ do
     wireless="<span foreground='${red}'> </span>"
   fi
   if [ "${wired_status}" = "connected" ] || [ "${docking_status}" = "connected" ]; then
-    wired=""
+    wired="󰈀"
     wireless=""
   else
     wired=""
@@ -71,14 +71,14 @@ do
     if [ "$(cat ${ac_path}/online)" -eq 1 ]; then
       if [ "$(cat ${battery_path}/status)" = "Charging" ]; then
         # AC active + battery charging
-        power="<span foreground='${green}'> </span>"
+        power="<span foreground='${green}'> </span>"
       else
         # AC active
         power=" "
       fi
     else
       # battery active
-      power=" "
+      power=" "
     fi
     power="${power}$(cat ${battery_path}/capacity)%%"
   else
@@ -104,9 +104,9 @@ do
   if [ -d "${backlight_path}" ]; then
     brightness_actual=$(cat "${backlight_path}/actual_brightness")
     brightness_max=$(cat "${backlight_path}/max_brightness")
-    backlight=" $(( brightness_actual * 100 / brightness_max))%%"
+    backlight="󰃟 $(( brightness_actual * 100 / brightness_max))%%"
   else
-    backlight="<span foreground='${red}'> </span>"
+    backlight="<span foreground='${red}'>󰃟 </span>"
   fi
 
   ### status output
