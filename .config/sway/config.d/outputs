@@ -39,8 +39,15 @@ output eDP-1 {
 # beamer
 # output HDMI-A-1 pos 1920 0 res 1280x720
 
-# plansee uibk
+# work
+# left (HDMI)
 output "LG Electronics LG HDR WQHD 104NTGY6M095" {
     mode 3440x1440
     scale 1
+    pos 0 0
+}
+# right (DP)
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" disable {
+    mode 2560x1440
+    pos 3440 0
 }
