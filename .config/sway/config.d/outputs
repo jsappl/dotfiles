@@ -52,6 +52,19 @@ output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" disable {
     pos 3440 0
 }
 
+# work aquarium
+# left (USB-C)
+output "LG Electronics LG HDR WQHD 304NTAB35968" {
+    mode 3440x1440
+    scale 1
+    pos 0 0
+}
+# right (eDP-1)
+output "AU Optronics 0x2036 Unknown" {
+    mode 2560x1440
+    pos 3440 0
+}
+
 # small conference room
 output "OPTi Inc ULUNRK Unknown" {
   mode 1920x1080
