@@ -1,7 +1,8 @@
 #!/usr/bin/env fish
 set fish_greeting
+set -g fish_key_bindings fish_vi_key_bindings
 
-fish_vi_key_bindings
+fish_config theme choose "Dracula Official"
 fish_ssh_agent
 
 set -gx EDITOR nvim
