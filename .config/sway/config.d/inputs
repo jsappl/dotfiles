@@ -2,6 +2,8 @@ input * {
    xkb_layout us
    xkb_variant altgr-intl
    xkb_options caps:super
+   accel_profile flat
+   pointer_accel 0.0
 }
 # check altgr-intl keys: https://en.wikipedia.org/wiki/QWERTY#/media/File:KB_US-International.svg 
 
