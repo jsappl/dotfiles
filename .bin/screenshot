@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# screenshot - Wayland screenshot (whole screen or selection) with swappy editor
+# Usage: ./screenshot [full|select]  (defaults to select)
+
+set -euo pipefail
+
+MODE=${1:-select}
+TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+OUTPUT="/tmp/screenshot-${TIMESTAMP}.png"
+
+case "$MODE" in
+full | fullscreen)
+  grim - | swappy -f - -o "$OUTPUT"
+  ;;
+select | area)
+  grim -g "$(slurp)" - | swappy -f - -o "$OUTPUT"
+  ;;
+*)
+  echo "Usage: $0 [full|select]" >&2
+  echo "  full    - capture entire screen"
+  echo "  select  - select area with mouse (default)"
+  exit 1
+  ;;
+esac
+
+echo "Screenshot saved: $OUTPUT"
