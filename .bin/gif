@@ -29,7 +29,7 @@ wf-recorder -g "$GEOM" -f "$VIDEO_FILE"
 # Convert to GIF using ffmpeg
 if [ -f "$VIDEO_FILE" ]; then
   echo "Converting to GIF..."
-  ffmpeg -y -i "$VIDEO_FILE" -vf "fps=15,scale=640:-1:flags=lanczos" "$GIF_FILE"
+  ffmpeg -y -i "$VIDEO_FILE" -vf "fps=15,scale=1024:-1:flags=lanczos" "$GIF_FILE"
   echo "GIF saved to $GIF_FILE"
 else
   echo "Recording file not found."
