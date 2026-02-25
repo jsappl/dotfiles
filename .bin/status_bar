@@ -58,7 +58,8 @@ do
   network="${wireless}${wired}"
 
   ### bluetooth
-  if [ "$(bluetoothctl show | grep "Powered: yes" | wc -l)" != 0 ]; then
+  powered=$(echo "show" | bluetoothctl 2>/dev/null | grep "Powered: yes")
+  if [ -n "$powered" ]; then
     bluetooth="${sep}"
   else
     bluetooth=""
