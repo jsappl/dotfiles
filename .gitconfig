@@ -67,3 +67,5 @@
 	format = ssh
 [commit]
 	gpgSign = true
+[credential]
+	helper = store
