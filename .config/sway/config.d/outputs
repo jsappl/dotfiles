@@ -39,7 +39,7 @@ output eDP-1 {
 # beamer
 # output HDMI-A-1 pos 1920 0 res 1280x720
 
-# work
+# work (desk)
 # left (HDMI)
 output "LG Electronics LG HDR WQHD 104NTGY6M095" {
     mode 3440x1440
@@ -52,7 +52,7 @@ output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" disable {
     pos 3440 0
 }
 
-# work aquarium
+# work (aquarium)
 # left (USB-C)
 output "LG Electronics LG HDR WQHD 304NTAB35968" {
     mode 3440x1440
@@ -65,7 +65,16 @@ output "AU Optronics 0x2036 Unknown" {
     pos 3440 0
 }
 
-# small conference room
+# work (small conference room)
 output "OPTi Inc ULUNRK Unknown" {
   mode 1920x1080
+}
+
+# work (makerspace)
+output "LG Electronics LG HDR WQHD 408NTTQ3Z905" {
+    mode 3440x1440
+    pos -800 -1440
+}
+output eDP-1 {
+    pos 0 0
 }
