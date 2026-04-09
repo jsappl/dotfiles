@@ -26,10 +26,17 @@ fi
 echo "Recording... press Ctrl+C to stop."
 wf-recorder -g "$GEOM" -f "$VIDEO_FILE"
 
-# Convert to GIF using ffmpeg
+# Convert to GIF using ffmpeg (two-pass palette for optimal quality/size)
 if [ -f "$VIDEO_FILE" ]; then
+  PALETTE_FILE="/tmp/palette_${TIMESTAMP}.png"
   echo "Converting to GIF..."
-  ffmpeg -y -i "$VIDEO_FILE" -vf "fps=15,scale=1024:-1:flags=lanczos" "$GIF_FILE"
+  ffmpeg -y -i "$VIDEO_FILE" \
+    -vf "fps=15,scale=800:-1:flags=lanczos,palettegen=stats_mode=diff" \
+    "$PALETTE_FILE"
+  ffmpeg -y -i "$VIDEO_FILE" -i "$PALETTE_FILE" \
+    -filter_complex "fps=15,scale=800:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" \
+    "$GIF_FILE"
+  rm -f "$PALETTE_FILE"
   echo "GIF saved to $GIF_FILE"
 else
   echo "Recording file not found."
