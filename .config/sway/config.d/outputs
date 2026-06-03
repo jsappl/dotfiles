@@ -27,6 +27,12 @@ output "Philips Consumer Electronics Company PHL 275E2F UHB2112006744" {
     pos 3000 40
 }
 
+# office first floor @home
+output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" {
+    mode 2560x1440
+    pos 3440 0
+}
+
 # parents home
 output "BNQ BenQ XL2411Z 51G07519SL0" {
     mode 1920x1080
@@ -40,16 +46,10 @@ output eDP-1 {
 # output HDMI-A-1 pos 1920 0 res 1280x720
 
 # work (desk)
-# left (HDMI)
 output "LG Electronics LG HDR WQHD 104NTGY6M095" {
     mode 3440x1440
     scale 1
     pos 0 0
-}
-# right (DP)
-output "Philips Consumer Electronics Company PHL 275E2F UHB2112006148" disable {
-    mode 2560x1440
-    pos 3440 0
 }
 
 # work (aquarium)
