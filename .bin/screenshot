@@ -11,6 +11,7 @@ OUTPUT="/tmp/screenshot-${TIMESTAMP}.png"
 
 case "$MODE" in
 full | fullscreen)
+  sleep 3 # delay to allow user to prepare the screen
   grim - | swappy -f - -o "$OUTPUT"
   ;;
 select | area)
