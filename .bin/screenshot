@@ -17,10 +17,15 @@ full | fullscreen)
 select | area)
   grim -g "$(slurp)" - | swappy -f - -o "$OUTPUT"
   ;;
+window)
+  GEOMETRY=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)
+  grim -g "$GEOMETRY" - | swappy -f - -o "$OUTPUT"
+  ;;
 *)
-  echo "Usage: $0 [full|select]" >&2
+  echo "Usage: $0 [full|select|window]" >&2
   echo "  full    - capture entire screen"
   echo "  select  - select area with mouse (default)"
+  echo "  window  - hover over window to capture it"
   exit 1
   ;;
 esac
