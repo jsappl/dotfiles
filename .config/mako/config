@@ -1,28 +1,20 @@
-font=Source Code Pro 11
-
+font=JetBrains Mono
 ignore-timeout=1
-default-timeout=0
+default-timeout=10000
 max-visible=5
 
-# blue variant
-#background-color=#62d6e8
-#text-color=#282936
-#border-color=#e9e9f4
+background-color=#282a36
+text-color=#f8f8f2
+border-color=#f8f8f2
 
-# pink variant
-#background-color=#ea51b2
-#text-color=#282936
-#border-color=#ea51b2
+[urgency=low]
+border-color=#50FA7B
 
-# yellow variant
-background-color=#f4f99d
-text-color=#282936
-border-color=#e7f127
+[urgency=normal]
+border-color=#f1fa8c
 
 [urgency=high]
-background-color=#ff5555
-text-color=#282936
-border-color=#ff0000
+border-color=#ff5555
 
 [hidden]
 format=+%h more...
