@@ -6,6 +6,7 @@
 
 [delta]
     navigate = true  # use n and N to move between diff sections
+    features = dracula
 
 [merge]
     conflictstyle = zdiff3
@@ -14,6 +15,7 @@
 # Local/Private config goes in the include
 [include]
   path = ~/.gitconfig.local
+  path = ~/.config/delta/dracula.gitconfig
 # URL ALIASES
 # -----------
 # Alias for Dracula Org repositories
