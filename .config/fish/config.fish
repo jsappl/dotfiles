@@ -17,3 +17,6 @@ set -gx TEXMFHOME ~/.texmf
 
 set -gx PASSWORD_STORE_GENERATED_LENGTH 32
 set -gx PASSWORD_STORE_ENABLE_EXTENSIONS true
+
+# direnv
+direnv hook fish | source
