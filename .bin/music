@@ -23,4 +23,5 @@ done | fzy -l 20 -p "Select: " | grep -o '^[0-9]*')
 [[ -z "$idx" ]] && exit 0
 
 IFS=$'\t' read -r _ id _ <<<"${results[$idx]}"
-mpv --no-video "https://www.youtube.com/watch?v=$id"
+# ponytail: yt-dlp fetches, mpv only plays — mpv's ffmpeg gets 403 on googlevideo URLs
+yt-dlp -q -f bestaudio -o - "https://www.youtube.com/watch?v=$id" | mpv --no-video -
