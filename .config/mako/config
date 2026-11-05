@@ -16,5 +16,8 @@ border-color=#f1fa8c
 [urgency=high]
 border-color=#ff5555
 
+[app-name=Polizeimotorsport]
+default-timeout=0
+
 [hidden]
 format=+%h more...
