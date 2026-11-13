@@ -16,15 +16,12 @@ border-color=#f1fa8c
 [urgency=high]
 border-color=#ff5555
 
-# watcher change alerts stay until clicked; daily "no change" popups (urgency=low) auto-close
-[app-name=Polizeimotorsport urgency=high]
+# website watchers: all popups (change + daily "no change") stay until clicked
+[app-name=Polizeimotorsport]
 default-timeout=0
 
-[app-name=Lectronz urgency=high]
+[app-name=Lectronz]
 default-timeout=0
 
 [hidden]
 format=+%h more...
-
-[app-name=Lectronz]
-default-timeout=0
